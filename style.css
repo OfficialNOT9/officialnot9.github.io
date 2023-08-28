@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap");
+
+:root {
+  --primary-color: rgb(120, 235, 255);
+  --text-color-primary: rgb(12, 18, 48);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h3 {
+  font-size: 44px;
+  line-height: 55px;
+  color: #121212;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 20px;
+  line-height: 32px;
+  color: #6c6c6c;
+  margin-top: 16px;
+  font-weight: normal;
+}
+
+/* Navbar */
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 6.5rem;
+  position: fixed;
+  background: transparent;
+  transition: all 0.5s ease;
+  z-index: 100000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  padding-left: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.logo h1 span {
+  color: var(--primary-color);
+}
+
+.nav .navbar-toggler {
+  display: none;
+  border: none;
+  outline: none;
+}
+
+.nav .navbar-toggler .toggler-icon {
+  width: 27px;
+  height: 3px;
+  background-color: #121212;
+  margin: 5px 0;
+  position: relative;
+  display: block;
+  transition: all 0.3s ease-out 0s;
+}
+
+.nav .menu-bar .menu-items {
+  display: flex;
+  float: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .menu-bar .menu-items li {
+  margin: 0 15px;
+}
+
+.nav .menu-bar .menu-items li a {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav .menu-bar .menu-items .active {
+  color: var(--primary-color);
+}
+
+.nav .menu-bar .menu-items li a:hover {
+  color: var(--primary-color);
+}
+
+.nav .navbar-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .navbar-social span {
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 10px;
+  color: #6c6c6c;
+}
+
+.nav .navbar-social ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .navbar-social ul li {
+  margin: 0 7px;
+  font-size: 22px;
+}
+.nav .navbar-social ul li a i {
+  color: var(--primary-color);
+}
+
+.nav .navbar-social ul li a i:hover {
+  color: white;
+}
+
+.back {
+  background-image: url(/IMG_20230827_083951.jpg);
+  width: 100%;
+  height: 120vh;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.back .overlay {
+  background-image: linear-gradient(
+    rgba(0, 6, 56, 0.9),
+    rgba(0, 20, 75, 0.9),
+    40%,
+    rgba(0, 47, 134, 0.3),
+    70%,
+    rgba(0, 119, 255, 0.12)
+  );
+  width: 100%;
+  height: 100%;
+}
+
+.back .hero-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.back .hero-shape img {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 55px;
+  font-weight: 600;
+}
+
+.hero-text h3 {
+  font-size: 30px;
+  color: white;
+}
+
+.hero-text h6 {
+  color: white;
+}
+
+.main-btn {
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 2px solid transparent;
+  padding: 0 32px;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease-out 0%;
+  z-index: 5;
+}
+
+.hero-text .header-btn {
+  margin-top: 22px;
+}
+
+.hero-text .header-btn li {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+}
+
+.hero-text .header-btn li a.main-btn {
+  border-radius: 30px;
+  background-color: white;
+  border: 0;
+  line-height: 50px;
+  text-transform: uppercase;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  color: var(--text-color-primary);
+}
+
+.hero-text .header-btn li a.main-btn i {
+  margin-left: 5px;
+  color: var(--text-color-primary);
+}
+
+.hero-text .header-btn .btn-one {
+  color: var(--text-color-primary);
+}
+
+.hero-text .header-btn .btn-one::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(245, 247, 255),
+    rgb(211, 246, 255)
+  );
+  background-position: right center;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  z-index: -1;
+}
+
+.hero-text .header-btn .btn-one:hover::before {
+  background-image: linear-gradient(
+    to left,
+    rgb(245, 247, 255),
+    rgb(211, 246, 255)
+  );
+  background-position: left center;
+}
+
+#wrapper {
+  margin: 5rem 7rem 10rem 7rem;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.service h3 {
+  color: var(--text-color-primary);
+}
+
+.service h6 {
+  margin-bottom: 6rem;
+  color: var(--text-color-primary);
+}
+
+.service .service-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service .service-content .box {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service .service-content .box .box-one,
+.box-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.service .service-content .box .box-one .service,
+.box-two .service {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.service .service-content .box .box-one .service i,
+.box-two .service i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--text-color-primary);
+}
+
+.service .service-content .box .box-one .service .service-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.service .service-content .service-img {
+  width: 40%;
+}
+
+.service .service-content .service-img img {
+  width: 100%;
+}
